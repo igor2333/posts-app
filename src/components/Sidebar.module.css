@@ -1,0 +1,27 @@
+.side {
+  background: #0064FE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 160px;
+  color: white;
+  position: absolute;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navList {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+.activeLink {
+  background: #035AE1;
+  text-decoration: underline;
+}
