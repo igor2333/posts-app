@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../components/Sidebar'
+import Menu from '../components/Menu'
 
 export default function MainLayout() {
   return (
     <>
-    <Sidebar/>
+    <Menu/>
     <Outlet/>
     </>
   )

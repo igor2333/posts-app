@@ -1,5 +1,5 @@
 export default function Users() {
   return (
-    <div></div>
+    <div>Users</div>
   )
 }
