@@ -1,0 +1,11 @@
+.postContainer {
+  margin: 15px;
+}
+
+.innerPostContainer {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #0064FE;
+  border-radius: 9px;
+}

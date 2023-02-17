@@ -6,7 +6,7 @@
   min-height: 100vh;
   width: 160px;
   color: white;
-  position: absolute;
+  position: fixed;
 }
 
 .nav {

@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import posts from '../data/posts'
 import NotFound from './NotFound'
-import style from './SinglePost.module.css'
+import Post from './Post'
 
 export default function SinglePost() {
   const params = useParams()
@@ -12,10 +12,9 @@ export default function SinglePost() {
   }
 
   return (
-    <div className={style.postContainer}>
+    <div>
       <h1>{post.userId}'s Post Info</h1>
-      <h2>{post.title}</h2>
-      <h3>{post.body}</h3>
+      <Post title={post.title} body={post.body}/>
       <Link to=".." relative="path">All posts</Link>
     </div>
   )

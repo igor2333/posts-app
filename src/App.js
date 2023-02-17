@@ -4,7 +4,7 @@ import Users from './components/Users'
 import Home from './components/Home'
 import MainLayout from './layouts/MainLayout'
 import Comments from './components/Comments'
-import SinglePost from './components/SinglePost'
+import SinglePost from './components/SinglePostPage'
 import NotFound from './components/NotFound'
 import './App.css'
 
