@@ -1,8 +1,9 @@
 .side {
-  background: #0064FE;
+  background: #b81fb3;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 100vh;
   width: 160px;
   color: white;
@@ -21,7 +22,13 @@
   padding: 0;
 }
 
+.menuTitle {
+  width: 160px;
+  padding: 10px 0px;
+  background: #7a1270;
+}
+
 .activeLink {
-  background: #035AE1;
+  background: #7a1270;
   text-decoration: underline;
 }
