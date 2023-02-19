@@ -21,9 +21,9 @@ export default function Posts() {
       <h1>Posts</h1>
       <div className={style.posts}>
       {isLoading ? <span>Loading...</span> : ''}
-      {data === null ? '' : data.map((post) => {
+      {!!data && data.map((post) => {
         return (
-            <Post key={post.id} title={post.title} body={post.body} link={`${post.id}`}/>
+            <Post key={post.id} title={post.title} body={post.body} link={`${post.id}`} postId={post.id}/>
         )
       })}
       </div>

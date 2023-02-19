@@ -30,7 +30,7 @@ export default function SinglePost() {
     <>
     <div>
       <h1>{post.userId}'s Post Info</h1>
-      <Post title={post.title} body={post.body}/>
+      <Post title={post.title} body={post.body} postId={post.id}/>
       <Link to=".." relative="path">All posts</Link>
     </div>
     </>
