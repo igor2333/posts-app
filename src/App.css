@@ -15,3 +15,8 @@ h1, h2, h3 {
   margin: 0px;
   padding: 10px;
 }
+
+span {
+  margin: 0;
+  padding: 0;
+}
