@@ -1,5 +1,5 @@
 .postContainer {
-  width: 700px;
+  width: 750px;
   margin: 0 auto;
 }
 
@@ -10,8 +10,28 @@
 }
 
 .postCommentsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.postComments {
+  text-align: left;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 300px;
+}
+
+.leaveComment {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.leaveCommentInput {
+  outline: none;
+  width: 300px;
+  margin: 12px 0px;
+  padding: 15px;
 }

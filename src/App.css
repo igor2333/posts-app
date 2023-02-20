@@ -21,6 +21,7 @@ span {
   padding: 0;
 }
 
-.text-align-left {
-  text-align: left;
+button {
+  cursor: pointer;
+  padding: 10px;
 }
