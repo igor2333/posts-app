@@ -5,11 +5,25 @@ import style from './Post.module.css'
 import Comment from './Comment'
 
 export default function Post({ title, body, link = null, postId }) {
+  const initialState = {name: '', email: '', body: ''}
   const [comments, setComments] = useState(null)
-  const [form, setForm] = useState({name: '', email: '', comment: ''})
+  const [form, setForm] = useState(initialState)
 
   function inputChangeHandler(e, name) {
     setForm({...form, [name]: e.target.value})
+  }
+
+  async function onSubmitHandler(e) {
+    e.preventDefault()
+
+      try {
+        const response = await axios.post(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`, form)
+        setComments([...comments, response.data])
+      } catch (error) {
+        console.log(error)
+      }
+
+    setForm(initialState)
   }
 
   useEffect(() => {
@@ -32,11 +46,11 @@ export default function Post({ title, body, link = null, postId }) {
               return (<Comment key={index} name={comment.name} email={comment.email} body={comment.body}/>)
             })}
           </div>
-          <form className={style.leaveComment}>
+          <form onSubmit={onSubmitHandler} className={style.leaveComment}>
             <span>Leave your comment</span>
             <input value={form.name} onChange={(e) => inputChangeHandler(e, 'name')} className={style.leaveCommentInput} placeholder='Enter your name...'/>
             <input value={form.email} onChange={(e) => inputChangeHandler(e, 'email')} className={style.leaveCommentInput} placeholder='Enter your email...'/>
-            <input value={form.comment} onChange={(e) => inputChangeHandler(e, 'comment')} className={style.leaveCommentInput} placeholder='Enter your comment...'/>
+            <input value={form.comment} onChange={(e) => inputChangeHandler(e, 'body')} className={style.leaveCommentInput} placeholder='Enter your comment...'/>
             <button>Leave comment</button>
           </form>
         </div>
