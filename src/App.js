@@ -3,7 +3,6 @@ import Posts from './components/Posts'
 import Users from './components/Users'
 import Home from './components/Home'
 import MainLayout from './layouts/MainLayout'
-import Comments from './components/Comments'
 import SinglePost from './components/SinglePostPage'
 import NotFound from './components/NotFound'
 import './App.css'
@@ -18,7 +17,6 @@ function App() {
             <Route path="posts" element={<Posts />}></Route>
             <Route path="posts/:postId" element={<SinglePost />}></Route>
             <Route path="users" element={<Users />}></Route>
-            <Route path="comments" element={<Comments />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Route>
         </Routes>

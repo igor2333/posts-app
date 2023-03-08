@@ -12,7 +12,6 @@ export default function Sidebar() {
         <li><NavLink className={({ isActive }) => (isActive ? styles.activeLink : null)} end to="/">Home</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? styles.activeLink : null)} end to="/posts">Posts</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? styles.activeLink : null)} to="/users">Users</NavLink></li>
-        <li><NavLink className={({ isActive }) => (isActive ? styles.activeLink : null)} to="/comments">Comments</NavLink></li>
       </ul>
     </nav>
     <div className={styles.menuTitle}>
